@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: [https://github.com/mikerodionov/platform-engineering-lab.git](https://github.com/mikerodionov/platform-engineering-lab.git)
+    repoURL: https://github.com/mikerodionov/platform-engineering-lab.git
     targetRevision: main
-    path: gitops/apps   # <--- CRITICAL: Argo will only sync manifests inside this specific folder
+    path: gitops/apps
   destination:
-    server: [https://kubernetes.default.svc](https://kubernetes.default.svc)
+    server: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
     automated:
